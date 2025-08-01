@@ -1,10 +1,11 @@
 const express = require("express"); // import express module(function) into a const
 const { Pool } = require("pg");
-
+const cors = require("cors");
 const app = express(); // fucn called and stored in app const
 // this line creates an express object that is used to define routes/middleware
 
 app.use(express.json());
+app.use(cors());
 
 const PORT = 8080;
 
@@ -25,7 +26,7 @@ pool
 
 app.get("/", async (req, res) => {
   try {
-    const query = "SELECT id, fname, email FROM employee";
+    const query = "SELECT id, fname, email FROM employee ORDER BY id";
     const result = await pool.query(query);
     res.json(result.rows);
   } catch (err) {

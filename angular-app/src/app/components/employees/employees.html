@@ -1,1 +1,25 @@
 <h3>Employees Table</h3>
+<button>Add Employee</button>
+<table border="1" cellpadding="8">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>First Name</th>
+      <th>Email</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    @for (employee of employeeList; track employee.id) {
+    <tr>
+      <td>{{ employee.id }}</td>
+      <td>{{ employee.fname }}</td>
+      <td>{{ employee.email }}</td>
+      <td>
+        <button>Edit</button
+        ><button (click)="onDeleteClick(employee.id)">Delete</button>
+      </td>
+    </tr>
+    }
+  </tbody>
+</table>
