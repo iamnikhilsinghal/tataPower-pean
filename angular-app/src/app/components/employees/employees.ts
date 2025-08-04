@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { EmployeeService } from '../../services/employee-service';
+import { Employee } from '../../models/employeeModel';
 // import { Employee } from '../../models/employeeModel';
 
 @Component({
@@ -9,7 +10,7 @@ import { EmployeeService } from '../../services/employee-service';
   styleUrl: './employees.scss',
 })
 export class Employees implements OnInit {
-  employeeList: any = [];
+  employeeList: Employee[] = [];
   constructor(private employeeService: EmployeeService) {}
 
   ngOnInit(): void {

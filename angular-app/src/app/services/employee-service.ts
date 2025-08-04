@@ -1,5 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
+import { Employee } from '../models/employeeModel';
 
 @Injectable({
   providedIn: 'root',
@@ -7,8 +9,8 @@ import { Injectable } from '@angular/core';
 export class EmployeeService {
   constructor(private http: HttpClient) {}
 
-  getEmployees() {
-    return this.http.get('http://localhost:8080');
+  getEmployees(): Observable<Employee[]> {
+    return this.http.get<Employee[]>('http://localhost:8080');
   }
 
   // no id pass
