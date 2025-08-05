@@ -1,12 +1,12 @@
 const express = require("express");
 const router = express.Router();
-const controller = require("../controllers/employeeController");
-// router.get("/favicon.ico", (req, res) => res.status(204).end());
+const employeeController = require("../controllers/employeeController");
+const authenticateToken = require("../middleware/authMiddleware");
 
-router.get("/", controller.getAll);
-router.get("/:id", controller.getById);
-router.post("/", controller.create);
-router.put("/:id", controller.update);
-router.delete("/:id", controller.remove);
+router.get("/", employeeController.getAll);
+router.get("/:id", authenticateToken, employeeController.getById);
+router.post("/", authenticateToken, employeeController.create);
+router.put("/:id", authenticateToken, employeeController.update);
+router.delete("/:id", authenticateToken, employeeController.remove);
 
 module.exports = router;

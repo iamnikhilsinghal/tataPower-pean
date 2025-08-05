@@ -9,26 +9,28 @@ import { Employee } from '../models/employeeModel';
 export class EmployeeService {
   constructor(private http: HttpClient) {}
 
+  BASE_URL = 'http://localhost:8080/api/emp';
+
   getEmployees(): Observable<Employee[]> {
-    return this.http.get<Employee[]>('http://localhost:8080');
+    return this.http.get<Employee[]>(this.BASE_URL);
   }
 
   // no id pass
   addEmployee(emp: any) {
-    return this.http.post(`http://localhost:8080`, emp);
+    return this.http.post(this.BASE_URL, emp);
   }
 
   // id pass
   editEmployee(id: number, emp: any) {
-    return this.http.put(`http://localhost:8080/${id}`, emp);
+    return this.http.put(`${this.BASE_URL}/${id}`, emp);
   }
 
   getEmployeesById(id: number) {
-    return this.http.get(`http://localhost:8080/${id}`);
+    return this.http.get(`${this.BASE_URL}/${id}`);
   }
 
   deleteEmployee(id: number) {
-    return this.http.delete(`http://localhost:8080/${id}`);
+    return this.http.delete(`${this.BASE_URL}/${id}`);
   }
 }
 
