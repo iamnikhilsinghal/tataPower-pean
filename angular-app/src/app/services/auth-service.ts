@@ -9,6 +9,10 @@ export class AuthService {
 
   BASE_URL = 'http://localhost:8080/api/auth';
 
+  signup(emp: any) {
+    return this.http.post(`${this.BASE_URL}/signup`, emp);
+  }
+
   login(emp: any) {
     return this.http.post(`${this.BASE_URL}/login`, emp);
   }

@@ -23,7 +23,7 @@ export class Login {
     private router: Router
   ) {
     this.loginForm = this.fb.group({
-      email: ['', Validators.required, Validators.email],
+      email: ['', Validators.required],
       password: ['', Validators.required],
     });
   }
@@ -37,7 +37,9 @@ export class Login {
         console.log('data', data);
         if (data?.token) {
           localStorage.setItem('token', data.token);
-          this.router.navigate(['/home']);
+          this.router.navigate(['/employees']);
+
+          // error handling
         } else {
           alert('Token not found in response');
         }

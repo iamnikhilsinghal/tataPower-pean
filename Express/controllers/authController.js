@@ -10,15 +10,15 @@ exports.signup = async (req, res) => {
   try {
     const userExist = await authModel.getUserByEmail(email);
     if (userExist.rows.length > 0) {
-      return res.json({ message: "Email already exists" });
+      return res.status(400).json({ message: "Email already exists" });
     }
 
     const hashedPwd = await bcrypt.hashSync(password, 10);
     const newUser = await authModel.signup(fname, email, hashedPwd);
-    res.json({ message: "User Created", user: newUser.rows[0] });
+    res.status(201).json({ message: "User Created", user: newUser.rows[0] });
   } catch (err) {
     console.error("Signup Error-", err);
-    res.json({ message: "Signup Server Error" });
+    res.status(500).json({ message: "Signup Server Error" });
   }
 };
 
@@ -27,7 +27,9 @@ exports.login = async (req, res) => {
   try {
     const userExist = await authModel.getUserByEmail(email);
     if (userExist.rows.length === 0) {
-      return res.json({ message: "Invalid Credentials- Email does not exist" });
+      return res
+        .status(400)
+        .json({ message: "Invalid Credentials- Email does not exist" });
     }
 
     const user = userExist.rows[0];
@@ -45,9 +47,9 @@ exports.login = async (req, res) => {
       }
     );
 
-    res.json({ token });
+    res.status(200).json({ token });
   } catch (err) {
     console.error("Login Error-", err);
-    res.json({ message: "Login Server Error" });
+    res.status(500).json({ message: "Login Server Error" });
   }
 };
