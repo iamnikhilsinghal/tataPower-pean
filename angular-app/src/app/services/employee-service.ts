@@ -13,13 +13,13 @@ export class EmployeeService {
   BASE_URL = 'http://localhost:8080/api/emp';
 
   getEmployees(): Observable<Employee[]> {
-    const token = this.authService.fetchToken();
-    const headers = {
-      headers: {
-        Authorization: `Bearer ${token}`,
-      },
-    };
-    return this.http.get<Employee[]>(this.BASE_URL, headers);
+    // const token = this.authService.fetchToken();
+    // const headers = {
+    //   headers: {
+    //     Authorization: `Bearer ${token}`,
+    //   },
+    // };
+    return this.http.get<Employee[]>(this.BASE_URL);
   }
 
   // no id pass
