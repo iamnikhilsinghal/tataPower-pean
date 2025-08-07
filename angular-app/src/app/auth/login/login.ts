@@ -31,18 +31,18 @@ export class Login {
   onLogin() {
     if (this.loginForm.valid) {
       const logindetails = this.loginForm.value;
-      console.log('logindetails', logindetails);
-
-      this.authservice.login(logindetails).subscribe((data: any) => {
-        console.log('data', data);
-        if (data?.token) {
-          localStorage.setItem('token', data.token);
-          this.router.navigate(['/employees']);
-
-          // error handling
-        } else {
-          alert('Token not found in response');
-        }
+      this.authservice.login(logindetails).subscribe({
+        next: (resp: any) => {
+          if (resp?.token) {
+            // localStorage.setItem('token', resp.token);
+            this.authservice.saveToken(resp.token);
+            this.router.navigate(['/employees']);
+          }
+        },
+        error: (err) => {
+          console.log('err', err);
+          alert(err.error.message);
+        },
       });
     }
   }

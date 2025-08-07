@@ -36,7 +36,7 @@ exports.login = async (req, res) => {
 
     const valid = await bcrypt.compare(password, user.password);
     if (!valid) {
-      return res.status(400).json({ error: "Invalid password" });
+      return res.status(400).json({ message: "Invalid password" });
     }
 
     const token = jwt.sign(
@@ -50,6 +50,6 @@ exports.login = async (req, res) => {
     res.status(200).json({ token });
   } catch (err) {
     console.error("Login Error-", err);
-    res.status(500).json({ error: "Login Server Error" });
+    res.status(500).json({ message: "Login Server Error" });
   }
 };

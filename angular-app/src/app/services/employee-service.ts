@@ -2,17 +2,24 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Employee } from '../models/employeeModel';
+import { AuthService } from './auth-service';
 
 @Injectable({
   providedIn: 'root',
 })
 export class EmployeeService {
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient, private authService: AuthService) {}
 
   BASE_URL = 'http://localhost:8080/api/emp';
 
   getEmployees(): Observable<Employee[]> {
-    return this.http.get<Employee[]>(this.BASE_URL);
+    const token = this.authService.fetchToken();
+    const headers = {
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+    };
+    return this.http.get<Employee[]>(this.BASE_URL, headers);
   }
 
   // no id pass

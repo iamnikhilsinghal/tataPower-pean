@@ -3,7 +3,7 @@ const router = express.Router();
 const employeeController = require("../controllers/employeeController");
 const authenticateToken = require("../middleware/authMiddleware");
 
-router.get("/", employeeController.getAll);
+router.get("/", authenticateToken, employeeController.getAll);
 router.get("/:id", authenticateToken, employeeController.getById);
 router.post("/", authenticateToken, employeeController.create);
 router.put("/:id", authenticateToken, employeeController.update);
