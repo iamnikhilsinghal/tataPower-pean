@@ -32,10 +32,13 @@ export class Signup {
   onSignup() {
     if (this.signupform.valid) {
       console.log('this.signupform.value', this.signupform.value);
-      this.authservice.signup(this.signupform.value).subscribe((resp) => {
-        console.log('resp', resp);
-        this.router.navigate(['/login']);
-        // error handling- signup falied
+      this.authservice.signup(this.signupform.value).subscribe({
+        next: () => {
+          this.router.navigate(['/login']);
+        },
+        error: (err) => {
+          alert(err.error.message);
+        },
       });
     }
   }
