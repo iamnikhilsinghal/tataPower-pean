@@ -63,3 +63,7 @@ exports.remove = async (req, res) => {
     res.status(500).json({ error: "Internal Server Error" });
   }
 };
+
+exports.adminData = (req, res) => {
+  res.json({ message: "This is Admin data" });
+};

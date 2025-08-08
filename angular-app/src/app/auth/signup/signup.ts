@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import {
   FormBuilder,
   FormGroup,
@@ -7,15 +7,17 @@ import {
 } from '@angular/forms';
 import { AuthService } from '../../services/auth-service';
 import { Router } from '@angular/router';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-signup',
-  imports: [ReactiveFormsModule],
+  imports: [ReactiveFormsModule, CommonModule],
   templateUrl: './signup.html',
   styleUrl: './signup.scss',
 })
-export class Signup {
+export class Signup implements OnInit {
   signupform: FormGroup;
+  roleList: any;
 
   constructor(
     private fb: FormBuilder,
@@ -26,6 +28,13 @@ export class Signup {
       fname: ['', Validators.required],
       email: ['', Validators.required],
       password: ['', Validators.required],
+      roleid: [''],
+    });
+  }
+
+  ngOnInit(): void {
+    this.authservice.getRoles().subscribe((resp) => {
+      this.roleList = resp;
     });
   }
 

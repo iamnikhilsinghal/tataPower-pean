@@ -5,7 +5,7 @@ const authModel = require("../models/authModel");
 const pool = require("../db");
 
 exports.signup = async (req, res) => {
-  const { fname, email, password } = req.body;
+  const { fname, email, password, roleid } = req.body;
 
   try {
     const userExist = await authModel.getUserByEmail(email);
@@ -14,7 +14,12 @@ exports.signup = async (req, res) => {
     }
 
     const hashedPwd = await bcrypt.hashSync(password, 10);
-    const newUser = await authModel.signup(fname, email, hashedPwd);
+    const newUser = await authModel.signup(
+      fname,
+      email,
+      hashedPwd,
+      Number(roleid)
+    );
     res.status(201).json({ message: "User Created", user: newUser.rows[0] });
   } catch (err) {
     console.error("Signup Error-", err);
@@ -22,6 +27,7 @@ exports.signup = async (req, res) => {
   }
 };
 
+// return user information along with token
 exports.login = async (req, res) => {
   const { email, password } = req.body;
   try {
@@ -47,9 +53,22 @@ exports.login = async (req, res) => {
       }
     );
 
-    res.status(200).json({ token });
+    res.status(200).json({ token, user: user.roleid });
   } catch (err) {
     console.error("Login Error-", err);
     res.status(500).json({ message: "Login Server Error" });
+  }
+};
+
+exports.getRole = async (req, res) => {
+  try {
+    const result = await authModel.getAllRoleMaster();
+    if (result.rows.length === 0) {
+      return res.status(404).json({ error: "Role Master not found" });
+    }
+    res.json(result.rows);
+  } catch (err) {
+    console.error("Error Role Deatils:", err);
+    res.status(500).json({ error: "Internal Server Error" });
   }
 };

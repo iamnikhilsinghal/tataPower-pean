@@ -18,6 +18,10 @@ export class AuthService {
     return this.http.post(`${this.BASE_URL}/login`, emp);
   }
 
+  getRoles() {
+    return this.http.get(`${this.BASE_URL}/roles`);
+  }
+
   saveToken(token: string) {
     localStorage.setItem('token', token);
   }
