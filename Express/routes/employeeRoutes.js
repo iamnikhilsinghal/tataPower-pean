@@ -6,17 +6,24 @@ const {
   authorizeRoles,
 } = require("../middleware/authMiddleware");
 
-router.get("/", authenticateToken, employeeController.getAll);
-router.get("/:id", authenticateToken, employeeController.getById);
-router.post("/", authenticateToken, employeeController.create);
-router.put("/:id", authenticateToken, employeeController.update);
-router.delete("/:id", authenticateToken, employeeController.remove);
+// router.get("/", authenticateToken, employeeController.getAll);
+// router.get("/:id", authenticateToken, employeeController.getById);
+// router.post("/", authenticateToken, employeeController.create);
+// router.put("/:id", authenticateToken, employeeController.update);
+// router.delete("/:id", authenticateToken, employeeController.remove);
 
 router.get(
   "/admin-info",
   authenticateToken,
-  authorizeRoles(["admin"]),
+  authorizeRoles([1]),
   employeeController.adminData
 );
 
 module.exports = router;
+
+// let obj = [
+//   {
+//     route: "/admin-info",
+//     roles: [1],
+//   },
+// ];

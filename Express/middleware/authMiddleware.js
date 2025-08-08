@@ -16,8 +16,14 @@ function authenticateToken(req, res, next) {
 function authorizeRoles(permittedRoles) {
   return (req, res, next) => {
     // permittedRoles=['admin']
-    if (!role) return res.status(401).json({ error: "Role missing" });
-    console.log("req.user");
+    if (!req.user.role) return res.status(401).json({ error: "Role missing" });
+    // we will compare that role coming in req should be equal to permittedRoles- next()
+    if (!permittedRoles.includes(req.user.role)) {
+      return res
+        .status(403)
+        .json({ error: "Access denied- Role is not as expected" });
+    }
+    next();
   };
 }
 module.exports = { authenticateToken, authorizeRoles };
