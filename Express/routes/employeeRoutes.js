@@ -15,7 +15,7 @@ const {
 router.get(
   "/admin-info",
   authenticateToken,
-  authorizeRoles([1]),
+  authorizeRoles([1, 3, 4]),
   employeeController.adminData
 );
 

@@ -1,4 +1,5 @@
 const jwt = require("jsonwebtoken");
+const { ROLES } = require("../consts");
 require("dotenv").config();
 
 function authenticateToken(req, res, next) {
@@ -19,9 +20,10 @@ function authorizeRoles(permittedRoles) {
     if (!req.user.role) return res.status(401).json({ error: "Role missing" });
     // we will compare that role coming in req should be equal to permittedRoles- next()
     if (!permittedRoles.includes(req.user.role)) {
-      return res
-        .status(403)
-        .json({ error: "Access denied- Role is not as expected" });
+      const expectedRoles = permittedRoles.map((item) => ROLES[item]);
+      return res.status(403).json({
+        error: `Access denied- Role should be ${expectedRoles.join(", ")}`,
+      });
     }
     next();
   };
