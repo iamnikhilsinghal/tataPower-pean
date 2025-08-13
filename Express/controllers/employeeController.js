@@ -10,6 +10,16 @@ exports.getAll = async (req, res) => {
   }
 };
 
+exports.getStudents = async (req, res) => {
+  try {
+    const result = await employeeModel.getAllStudents();
+    res.json(result.rows);
+  } catch (err) {
+    console.error("Error fetching Students:", err);
+    res.status(500).json({ error: "Internal Server Error" });
+  }
+};
+
 exports.getById = async (req, res) => {
   try {
     const { id } = req.params;
@@ -31,6 +41,17 @@ exports.create = async (req, res) => {
     res.status(201).json({ emp: result.rows[0] });
   } catch (err) {
     console.error("Error creating employee:", err);
+    res.status(500).json({ error: "Internal Server Error" });
+  }
+};
+
+exports.createStudnet = async (req, res) => {
+  try {
+    const { fname, email } = req.body;
+    const result = await employeeModel.createStudent(fname, email);
+    res.status(201).json({ emp: result.rows[0] });
+  } catch (err) {
+    console.error("Error creating Studnet:", err);
     res.status(500).json({ error: "Internal Server Error" });
   }
 };

@@ -4,6 +4,10 @@ exports.getAllEmployees = () => {
   return pool.query("SELECT id, fname, email FROM employee ORDER BY id");
 };
 
+exports.getAllStudents = () => {
+  return pool.query("select * from get_students()");
+};
+
 exports.getEmployeeById = (id) => {
   return pool.query("SELECT id, fname, email FROM employee WHERE id = $1", [
     id,
@@ -13,6 +17,14 @@ exports.getEmployeeById = (id) => {
 exports.createEmployee = (fname, email) => {
   return pool.query(
     "INSERT INTO employee (fname, email) VALUES ($1, $2) RETURNING *",
+    [fname, email]
+  );
+};
+
+exports.createStudent = (fname, email) => {
+  return pool.query(
+    "CALL add_student($1, $2)",
+    // "INSERT INTO students (fname, email) VALUES ($1, $2) RETURNING *",
     [fname, email]
   );
 };
