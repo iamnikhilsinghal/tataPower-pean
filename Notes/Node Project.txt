@@ -1,0 +1,161 @@
+PEAN Project
+
+CRUD Node API-
+Bikram
+Janardan
+Hari
+Shweta
+Swati
+Gaurav K
+
+start integration with FE- 30 mins
+
+Project-
+CURD End to end operation DONE
+login-logout end to end
+
+Day 31/43
+Gaurav, Sujit, Bikram out of 64
+
+Assesment-
+Project-
+Group Project-
+
+Day 32- Login/logout- token- JWT
+tokenize api- if token is passed,only then these api should be called
+MVC- model view controller
+connect.js---> connection, routes, business logic
+
+remianing days- 12 days
+5 days- mini end to end project- login+crud  + express topics + fs remain
+4 days- Postgres
+
+15,16,17 aug- Project
+3 days- Project + Assesment + QnA
+
+
+connect.js
+M---> model- queries
+db - connection
+routes
+C--->controller
+View- Angular
+
+
+authentication- 1st layer- token
+authoriation- 2nd layer- role based
+
+encrypt decrypt
+
+simple text--- encoded form
+enycrypted--- decode --- simple text
+
+
+
+TASK-
+
+Login Page-
+fake login---> cred - backend required- 
+call api- http://localhost:8080/api/auth/login
+body-
+{
+  "email": "test@test.com",
+  "password": "123456"
+}
+get token
+set token in localstorage
+listing page- without middleware
+header token set
+with middleware
+
+Opt1- Angular-- Class write code-- HW  -> 15%    +1 
+33rd day
+6/35
+7/35
+Assesment Submitted
+ 
+40th day? 
+Assesment/Project
+Opt2- Node- Seggration-- explain-- class implment--> o/p ??  Cancel
+
+_______________________________________
+
+
+Signup- name, email, password     -- db save  DONE
+login - fakeuser test ----> fetch user from db and validate DONE
+
+Backend- 
+signup DONE
+login- fakeuser replace with realuser DONE
+
+Frontend-
+signup DONE
+login- token DONE
+_______________________________________
+
+HW-
+error handling  DONE
+api header pass- tokenize api handling DONE
+tokenize routes- authguard- we should not go on those routes which
+are secured DONE
+FE- tokenize api +route  guards DONE
+BE secure- middleware DONE
+_______________________________________
+Day -35
+Role based authorization
+
+Next Monday- Submit- 18/August
+Complete end to end structure
+Feature develop
+
+Doubts-
+debug via vs code
+
+
+admin- admin+user page
+user- user page
+
+HW-
+backend-
+add role:
+column   DONE
+frontend dynamic roles- DONE
+authController DONE
+authModel DONE
+middleware- check role DONE
+route-
+adminData DONE
+userData- TASK
+Frontend- TASK- authguard role
+
+
+signup-role pass
+login- role fetch
+
+admin-data-    role pass
+
+Create 3 routes based on roles-
+adminOnly- admin
+adminAndUser- admin, user
+userOnly- user
+
+create 3 routes and route guard
+add 3 servies in emp services
+add userOnly and userAdmin data route in server....
+
+Authentication+ Authorization +CRUD : end to end
+
+This week-
+4 days
+Postgres start
+Last part of Authorization- wed, thurs
+procedure
+
+Next week-
+3 days
+Project submit- Next Monday-18th August
+Assesment- Next Tuesday-19th August
+20th- Last Day- Doubts discussion
+
+Connect to a Database: 
+psql -d postgres -U postgres

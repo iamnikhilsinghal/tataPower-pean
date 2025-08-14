@@ -1,0 +1,443 @@
+Node JS-
+runtime environment
+env where we can run our programming language code
+
+html css
+static data render on browser
+
+JS-2009
+client side- browser dependent
+dynamic- interactive- user event- button click
+
+not cross platform- server
+chrome----> famous--- utilize js and render - faster compliation of JS
+V8 Engine
+
+node- use V8 Engine --- facilitates to run js on server 
+
+node js in based on top of v8 engine
+js-- angular
+
+
+v8 engine
+node- made in JS
+express- framwork based on Node JS
+runtime environment
+programming language
+library 
+module
+
+angular- framework based on JS
+framework- module+library
+
+cross-platform---- independent OS and HW
+
+Event Loop?
+2-3 minutes
+call stack
+callback queue
+5.01
+
+Pros and cons of Node js
+https://www.geeksforgeeks.org/node-js/the-pros-and-cons-of-node-js-in-web-development/
+
+Complete-
+https://www.w3schools.com/nodejs/nodejs_get_started.asp\
+
+Project Doubts-
+
+
+download excel-
+headings
+data  -----------> Download
+
+
+UI HTML doc	---->  blob ----> download
+https://stackblitz.com/edit/angular-html-to-pdf-test-u4vgipdg?file=src%2Fapp%2Fapp.component.html,src%2Fapp%2Fapp.component.ts
+
+browser local file and save in angular folder
+
+
+Admin Login- manage app
+User- only use the app
+Route Gaurds- Navbar  // features show hide
+
+Login--
+{
+  "email": "admin@example.com",
+  "password": "SecurePassword123"
+}
+
+{
+  "email": "user@example.com",
+  "password": "SecurePassword123"
+}
+isUser=true
+Login button click-
+
+comp.ts
+isAdmin= true
+
+services-
+isAdmin
+isUser
+
+No use of API
+only use JSON hardcoded
+
+show:false
+npm init -y
+
+let http = require('http');
+http.createServer(function (req, res) {
+  res.writeHead(200, {'Content-Type': 'text/html5'});
+  res.end('Hello World!');
+}).listen(8080);
+
+create table employee (
+	id SERIAL PRIMARY KEY,
+	fname TEXT,
+	email TEXT
+)
+
+select * from employee;
+
+NEXT-
+crete api 
+connect with postgres
+fetch data from postgres
+
+___________________________
+
+Creds
+Hardcoded
+
+2. Authorization
+Roles 
+Route Guards
+
+localhost:4200
+1. /login
+2. /dashboard
+___________________________
+
+
+Angular Project?
+Node postgres connection
+
+Friday 4PM- github link upload
+Monday- Assesment- Angular Complete
+
+login
+ngOninit- isLogin= true  ---> navigate '/'
+
+Node- 
+get route + postgres connection  DONE
+
+Blocking vs. Non-Blocking Code
+MODULES
+
+out of 64 participants
+35-40 in call
+7 submitted coding assesment
+
+Common Logging-
+https://medium.com/@bjprajapati381/using-winston-for-logging-in-node-js-applications-d15302947c28
+
+___________________________
+
+MODULE 12: LIFECYCLE HOOKS
+https://www.freecodecamp.org/news/angular-lifecycle-hooks/
+
+MODULE 13: ROUTING
+https://medium.com/@jaydeepvpatil225/routing-in-angular-924066bde43
+
+Route Params-
+https://www.samjulien.com/how-to-use-route-parameters-in-angular/
+
+Nested Routing-
+https://medium.com/@yuvidev/router-08-child-routes-and-nested-child-routes-3ce66269e9ae
+
+MODULE 14: ADVANCED ROUTING
+https://medium.com/@hish.abdelshafouk/route-guards-in-angular-c9da0d815ef4
+
+MODULE 15: TEMPLATE-DRIVEN FORMS & MODULE 16: MODEL-DRIVEN FORMS
+Types of forms-
+https://medium.com/@jaydeepvpatil225/forms-in-angular-8fde7d0dcdf6
+
+MODULE 17: ASYNCHRONOUS OPERATIONS
+Observables vs. Promise
+https://medium.com/@nandeepbarochiya/asynchronous-operations-in-angular-promises-vs-observables-bcd019ff03bb
+https://www.geeksforgeeks.org/angular-js/what-is-the-difference-between-promises-and-observables-in-angular/
+
+HTTP Request / Response
+https://medium.com/@rupeshkumarthakur11/efficient-data-fetching-with-angulars-providehttpclient-a-comprehensive-guide-1bd29e1947fb
+
+MODULE 18: COMMUNICATION BETWEEN COMPONENTS
+https://www.c-sharpcorner.com/article/input-vs-ouput-vs-viewchild-in-angular/
+https://medium.com/@hish.abdelshafouk/viewchild-and-contentchild-in-angular-57bd48e3e835
+https://medium.com/@ayushgrwl365/angular-component-interaction-a-closer-look-at-input-and-output-bindings-for-seamless-6632c800aad
+
+MODULE 19: SERVER-SIDE RENDERING
+https://medium.com/@rakesh.mr.0341/understanding-server-side-rendering-in-angular-1b432ae4eb59
+https://www.geeksforgeeks.org/angular-js/server-side-rendering-in-angular/
+
+MODULE 20: ANGULAR TESTING
+Unit testing
+https://medium.com/ngconf/angular-testing-unit-testing-a843fa6f11c9
+https://www.angularminds.com/blog/writing-your-first-angular-unit-test-step-by-step-tutorial
+
+lazy loading
+https://angular.dev/reference/migrations/route-lazy-loading
+
+__________________________________-
+
+Node
+
+debugger-
+https://www.freecodecamp.org/news/how-to-debug-node-js-applications/
+
+exception handling-
+https://www.geeksforgeeks.org/node-js/how-to-handle-errors-in-node-js/
+https://dev.to/amritak27/advanced-error-handling-in-nodejs-1ep8
+https://medium.com/@vickypaiyaa/power-of-advanced-error-handling-techniques-in-node-js-44d53cda3c61
+
+Today's Topics-
+Day-28:
+npm package  DONE
+debugger DONE
+Angular- breakpoints
+Node- debugger
+VS code- debugger
+
+Day-29
+exception handling
+sync-
+try catch
+
+async-
+callback
+promise
+async-await
+
+TASK- call api and handle exception in all 3 above ways.
+
+https://myaccount.google.com/apppasswords
+
+app-name
+node-mailer-gmail
+
+pwd- 
+umkd klmq kehf pszd
+
+Sendmail-
+https://michell-e.medium.com/send-mails-26a595150c4f
+
+
+Emitting Event
+Listening Event
+
+
+node
+task- login, user add... event emit
+
+Day 31-
+MODULE 10: FILE SYSTEM AND PATH MODULE
+__________________________________-
+
+Complete Node Walkaround-
+https://www.w3schools.com/nodejs/
+
+debugger-
+https://www.freecodecamp.org/news/how-to-debug-node-js-applications/
+
+exception handling-
+https://www.geeksforgeeks.org/node-js/how-to-handle-errors-in-node-js/
+https://dev.to/amritak27/advanced-error-handling-in-nodejs-1ep8
+https://medium.com/@vickypaiyaa/power-of-advanced-error-handling-techniques-in-node-js-44d53cda3c61
+
+Sendmail-
+https://michell-e.medium.com/send-mails-26a595150c4f
+https://myaccount.google.com/apppasswords
+
+Common Logging-
+https://medium.com/@bjprajapati381/using-winston-for-logging-in-node-js-applications-d15302947c28
+
+js module vs es module-
+https://blog.logrocket.com/commonjs-vs-es-modules-node-js/
+
+Package-
+https://www.freecodecamp.org/news/how-to-create-and-publish-your-first-npm-package/
+
+file system-
+https://www.geeksforgeeks.org/node-js/node-js-file-system/
+
+express crud With Postgres-
+https://blog.logrocket.com/crud-rest-api-node-js-express-postgresql/
+
+
+express crud-
+https://www.freecodecamp.org/news/create-crud-api-project/
+https://www.geeksforgeeks.org/node-js/rest-api-using-the-express-to-perform-crud-create-read-update-delete/
+
+
+Git repo-
+https://github.com/iamnikhilsinghal/NODE-CRUD-SQL
+https://github.com/iamnikhilsinghal/NODE-CRUD-MONGO_ATLAS_JWT
+
+POSTGRES walkaround-
+https://www.w3schools.com/postgresql/
+_________________________________
+POSTGRES LINKS-
+
+Datatypes- DONE
+https://www.geeksforgeeks.org/postgresql/postgresql-data-types/
+
+Shell Commands- DONE
+https://learnomate.org/postgresql-basic-psql-commands/
+
+joins- DONE
+https://www.geeksforgeeks.org/postgresql/postgresql-joins/
+
+relationships- DONE
+https://medium.com/@tkachuk.m_ak17/sql-relationships-with-postgresql-26c9a75c29c9
+
+architecture- Wednesday
+https://www.geeksforgeeks.org/postgresql/postgresql-system-architecture/
+https://docs.netapp.com/us-en/ontap-apps-dbs/postgres/postgres-architecture.html
+
+sequlize- ORM
+https://www.djamware.com/post/5b56a6cc80aca707dd4f65a9/nodejs-expressjs-sequelizejs-and-postgresql-restful-api
+
+Project discussion
+
+commands-
+customers- id, name, city and insert 3 records
+orders- id, customer_id, product and insert 3 records
+
+4 commands
+
+CREATE TABLE customers (
+    id SERIAL PRIMARY KEY,
+    name VARCHAR(100),
+    city VARCHAR(100)
+);
+ 
+INSERT INTO customers (name, city) VALUES
+('rahul', 'noida'),
+('john', 'punjab'),
+('yash', 'delhi');
+
+select * from customers;
+
+FOREIGN KEY (customer_id) REFERENCES customers(id)
+customers.id === orders.customer_id
+
+
+Relationships-
+1:1
+emp-salary
+
+1:M  
+parent-kids
+customer-product
+
+M:M
+
+Wednesday-
+sequalize DONE
+procedures and functions DONE
+
+Thurusday-
+sql vs nosql 
+vs code debugging- node project
+architecture
+socket- node continous chat update
+fs- remaining topics
+file upload and show 
+
+monday- project
+_________________________________
+
+sequalize-
+it is an ORM
+
+ORM?
+a programming technique that creates a "bridge" between 
+object-oriented programming languages and relational databases
+
+db interact  - queries   -----> programming lang's object-- function
+function  ==  query
+
+SELECT id, fname, email FROM employee WHERE id = $1
+OR
+const result= await User.findByPk(id)
+sequalize-- Node's library to use ORM
+
+const pool = new Pool({
+  user: "postgres",
+  host: "localhost",
+  database: "postgres",
+  password: "root",
+  port: 5432,
+});
+
+helmet
+pg-hstore
+
+changes-
+  "development": {
+    "username": "postgres",
+    "password": "root",
+    "database": "node_api",
+    "host": "localhost",
+    "dialect": "postgres"
+  },
+
+task- 
+api- insert data into students table
+
+CREATE OR REPLACE PROCEDURE PROCEDURE_NAME(
+    PARAMETER
+)
+LANGUAGE plpgsql
+AS $$
+BEGIN
+   QUERY
+END;
+$$;
+_________________________________
+
+issue-
+CREATE OR REPLACE PROCEDURE add_student(
+    p_fname VARCHAR,
+    p_email VARCHAR,
+    OUT new_id INT
+)
+LANGUAGE plpgsql
+AS $$
+BEGIN
+    INSERT INTO student (fname, email)
+    VALUES (p_fname, p_email)
+    RETURNING id INTO new_id;
+END;
+$$;
+
+CALL add_student('John', 'john@example.com', new_id);
+
+PostgreSQL best practice is:
+Use functions for fetching (queries).
+Use procedures for actions (insert, update, delete, complex transactions).
+
+uploads
+user FE file upload
+FE file show- fetch from this folder
+
+
+
+
+
+
+
+
+
