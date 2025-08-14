@@ -1,0 +1,104 @@
+Complete Node Walkaround-
+https://www.w3schools.com/nodejs/
+
+debugger-
+https://www.freecodecamp.org/news/how-to-debug-node-js-applications/
+
+exception handling-
+https://www.geeksforgeeks.org/node-js/how-to-handle-errors-in-node-js/
+https://dev.to/amritak27/advanced-error-handling-in-nodejs-1ep8
+https://medium.com/@vickypaiyaa/power-of-advanced-error-handling-techniques-in-node-js-44d53cda3c61
+
+Sendmail-
+https://michell-e.medium.com/send-mails-26a595150c4f
+https://myaccount.google.com/apppasswords
+
+Common Logging-
+https://medium.com/@bjprajapati381/using-winston-for-logging-in-node-js-applications-d15302947c28
+
+js module vs es module-
+https://blog.logrocket.com/commonjs-vs-es-modules-node-js/
+
+Package-
+https://www.freecodecamp.org/news/how-to-create-and-publish-your-first-npm-package/
+
+file system-
+https://www.geeksforgeeks.org/node-js/node-js-file-system/
+
+express crud With Postgres-
+https://blog.logrocket.com/crud-rest-api-node-js-express-postgresql/
+
+
+express crud-
+https://www.freecodecamp.org/news/create-crud-api-project/
+https://www.geeksforgeeks.org/node-js/rest-api-using-the-express-to-perform-crud-create-read-update-delete/
+
+
+Git repo-
+https://github.com/iamnikhilsinghal/NODE-CRUD-SQL
+https://github.com/iamnikhilsinghal/NODE-CRUD-MONGO_ATLAS_JWT
+
+POSTGRES walkaround-
+https://www.w3schools.com/postgresql/
+_________________________________
+POSTGRES LINKS-
+
+Datatypes- DONE
+https://www.geeksforgeeks.org/postgresql/postgresql-data-types/
+
+Shell Commands- DONE
+https://learnomate.org/postgresql-basic-psql-commands/
+
+joins- DONE
+https://www.geeksforgeeks.org/postgresql/postgresql-joins/
+
+relationships- DONE
+https://medium.com/@tkachuk.m_ak17/sql-relationships-with-postgresql-26c9a75c29c9
+
+architecture- Wednesday
+https://www.geeksforgeeks.org/postgresql/postgresql-system-architecture/
+https://docs.netapp.com/us-en/ontap-apps-dbs/postgres/postgres-architecture.html
+
+sequlize- ORM
+https://www.djamware.com/post/5b56a6cc80aca707dd4f65a9/nodejs-expressjs-sequelizejs-and-postgresql-restful-api
+
+Project discussion
+
+commands-
+customers- id, name, city and insert 3 records
+orders- id, customer_id, product and insert 3 records
+
+4 commands
+
+CREATE TABLE customers (
+    id SERIAL PRIMARY KEY,
+    name VARCHAR(100),
+    city VARCHAR(100)
+);
+ 
+INSERT INTO customers (name, city) VALUES
+('rahul', 'noida'),
+('john', 'punjab'),
+('yash', 'delhi');
+
+select * from customers;
+
+FOREIGN KEY (customer_id) REFERENCES customers(id)
+customers.id === orders.customer_id
+
+
+Relationships-
+1:1
+emp-salary
+
+1:M  
+parent-kids
+customer-product
+
+M:M
+
+Wednesday-
+sql vs nosql
+procedures
+vs code debugging
+file upload and show
